@@ -3,7 +3,7 @@ import axios from "axios";
 import { setToken } from "../utils/auth";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
@@ -85,9 +85,9 @@ const Login = () => {
 
         <p className="text-sm text-white/80 text-center mt-6">
           Don’t have an account?{" "}
-          <a href="/register" className="text-white font-medium underline hover:text-indigo-100">
-            Register
-          </a>
+          <Link to="/register" className="text-white font-medium underline hover:text-indigo-100">
+    Register
+  </Link>
         </p>
       </div>
     </div>
